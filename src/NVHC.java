@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -27,6 +25,15 @@ public class NVHC {
         this.fullname = sc.nextLine();
         System.out.print("Nhập lương: ");
         this.luong = sc.nextDouble();
+        char [] charsAR = this.fullname.toCharArray();
+        charsAR[0] = Character.toUpperCase(charsAR[0]);
+        for (int i = 0 ; i < charsAR.length ; i++){
+            if (charsAR[i] == ' '){
+                charsAR[i + 1] = Character.toUpperCase(charsAR[i + 1]);
+            }
+        }
+        this.fullname = String.valueOf(charsAR);
+
     }
     public void xuatNV(){
         System.out.print("Mã NV " + this.maNV);

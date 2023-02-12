@@ -1,23 +1,20 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
     static void taoMenu(ArrayList<NVHC> ds){
-        System.out.print("\n          === ỨNG DỤNG QUẢN LÝ ===");
+        System.out.print("\n           === ỨNG DỤNG QUẢN LÝ ===");
         System.out.print("\n+=============================================+");
-        System.out.print("\n|   1.Nhập DS nhân viên.                      |" +
-                         "\n|   2.Xuất DS nhân viên.                      |" +
-                         "\n|   3.Tìm, hiển thị nhân viên theo mã.        |" +
-                         "\n|   4.Xóa nhân viên theo mã.                  |" +
-                         "\n|   5.Cập nhật thông tin theo mã.             |" +
-                         "\n|   6.Tìm nhân viên theo khoảng lương.        |" +
-                         "\n|   7.Sắp xếp nhân viên theo họ tên.          |" +
-                         "\n|   8.Sắp xếp nhân viên theo thu nhập.        |" +
-                         "\n|   9.Xuất 5 nhân viên thu nhập cao nhất.     |" +
-                         "\n|   0.Thoát.                                  |");
+        System.out.print("\n|   ❶.Nhập DS nhân viên.                      |" +
+                         "\n|   ❷.Xuất DS nhân viên.                      |" +
+                         "\n|   ❸.Tìm, hiển thị nhân viên theo mã.        |" +
+                         "\n|   ❹.Xóa nhân viên theo mã.                  |" +
+                         "\n|   ❺.Cập nhật thông tin theo mã.             |" +
+                         "\n|   ❻.Tìm nhân viên theo khoảng lương.        |" +
+                         "\n|   ❼.Sắp xếp nhân viên theo họ tên.          |" +
+                         "\n|   ❽.Sắp xếp nhân viên theo thu nhập.        |" +
+                         "\n|   ❾.Xuất 5 nhân viên thu nhập cao nhất.     |" +
+                         "\n|   ⓿.Thoát.                                  |");
         System.out.print("\n+=============================================+");
     }
     static void nhapDS(ArrayList<NVHC> ds){
