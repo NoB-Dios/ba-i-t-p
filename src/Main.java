@@ -54,8 +54,8 @@ public class Main {
         }
     }
     static void xuatDS(ArrayList<NVHC> ds){
-        for (Object i : ds) {
-            System.out.println(i);
+        for (NVHC nv : ds) {
+            System.out.println(nv);
         }
     }
     static boolean checkDS(ArrayList<NVHC> ds, String x){
