@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -53,7 +56,7 @@ public class NVHC {
         return position;
     }
     public String getMaNV() {
-        return maNV;
+        return maNV.toUpperCase();
     }
 
     public double getLuong() {
@@ -61,10 +64,10 @@ public class NVHC {
     }
     public double getThue(){
         double thue = 0;
-        if (getLuong() > 9000 && getLuong() <= 15000){
+        if (getLuong() > 9000000 && getLuong() <= 15000000){
              thue = getLuong() * 0.1;
         }
-        if (getLuong() > 15000){
+        if (getLuong() > 15000000){
              thue = getLuong() * 0.12;
         }
         return thue;
@@ -72,6 +75,9 @@ public class NVHC {
     public double getLuongSauThue(){
         return getLuong() - getThue();
     }
+
+    Locale lc = new Locale("vi","VN");
+    NumberFormat nb = NumberFormat.getCurrencyInstance(lc);
 
     @Override
     public boolean equals(Object o) {
@@ -83,6 +89,6 @@ public class NVHC {
     @Override
     public String toString() {
         return  "[ "+this.getPosition()+"-"+this.maNV+" ]"+
-                " [ Họ tên: "+this.fullname+" == Lương : "+getLuong()+" == Lương thực nhận: "+getLuongSauThue()+" ]";
+                " [ Họ tên: "+this.fullname+" == Lương : "+nb.format(getLuong())+" == Lương thực nhận: "+nb.format(getLuongSauThue())+" ]";
     }
 }

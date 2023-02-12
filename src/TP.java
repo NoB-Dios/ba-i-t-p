@@ -45,6 +45,6 @@ public class TP extends NVHC{
     @Override
     public String toString() {
         return  "[ "+this.getPosition()+"-"+getMaNV()+" ]" +
-                " [ Họ tên: "+getFullname()+" == Lương: "+getLuong()+" == Tiền trách nhiệm: "+this.luongTrachNhiem+" == Lương thực nhận: "+ getLuongSauThue()+" ]";
+                " [ Họ tên: "+getFullname()+" == Lương: "+nb.format(getLuong())+" == Tiền trách nhiệm: "+this.luongTrachNhiem+" == Lương thực nhận: "+nb.format(getLuongSauThue())+" ]";
     }
 }

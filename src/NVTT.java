@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -47,6 +48,6 @@ public class NVTT extends NVHC{
     @Override
     public String toString() {
         return  "[ "+getPosition()+ "-"+getMaNV()+" ]"+
-                " [ Họ tên: "+getFullname()+" == Lương: "+ getLuong()+" == Doanh số " + this.doanhSo+" == Hoa hồng: "+this.hoaHong+" == Lương thực nhận: "+getLuongSauThue()+" ]";
+                " [ Họ tên: "+getFullname()+" == Lương: "+ nb.format(getLuong())+" == Doanh số " + nb.format(this.doanhSo)+" == Hoa hồng: "+this.hoaHong+"%"+" == Lương thực nhận: "+nb.format(getLuongSauThue())+" ]";
     }
 }
