@@ -80,8 +80,4 @@ public class NVHC {
         return  "[ "+this.getPosition()+"-"+this.maNV+" ]"+
                 " [ Họ tên: "+this.fullname+" == Lương : "+getLuong()+" == Lương thực nhận: "+getLuongSauThue()+" ]";
     }
-
-
-
-
 }
