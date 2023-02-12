@@ -44,6 +44,11 @@ public class NVHC {
     public String getFullname() {
         return fullname;
     }
+    public String getName(){
+        int vt = this.fullname.lastIndexOf(" ");
+        String x = this.fullname.substring(vt + 1);
+        return x;
+    }
     public String getPosition() {
         return position;
     }

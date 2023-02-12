@@ -156,7 +156,7 @@ public class Main {
         Collections.sort(ds, new Comparator<NVHC>() {
             @Override
             public int compare(NVHC o1, NVHC o2) {
-                return o1.getFullname().compareTo(o2.getFullname());
+                return o1.getName().compareTo(o2.getName());
             }
         });
     }
